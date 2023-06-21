@@ -9,7 +9,7 @@ bus_t bus = {NULL, NULL, NULL, 0};
 int main(int argc, char *argv[])
 {
 	char *content;
-	FILE *file;
+	FILE *file = NULL;
 	size_t size = 0;
 	ssize_t read_line = 1;
 	stack_t *stack = NULL;
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
-	}
+	}	
 	while (read_line > 0)
 	{
 		content = NULL;

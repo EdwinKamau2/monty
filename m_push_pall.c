@@ -45,10 +45,12 @@ void m_push(stack_t **head, unsigned int l_number)
  */
 void m_pall(stack_t **head, unsigned int l_number)
 {
-	stack_t *head;
+	stack_t *h;
 	(void)l_number;
 
 	h = *head;
+	if (h == NULL)
+		return;
 	while (h)
 	{
 		printf("%d\n", h->n);

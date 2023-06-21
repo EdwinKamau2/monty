@@ -57,11 +57,15 @@ char  *clean_line(char *content);
 void m_push(stack_t **head, unsigned int l_number);
 void m_pall(stack_t **head, unsigned int l_number);
 void m_pint(stack_t **head, unsigned int l_number);
-int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
+int execute(char *content, stack_t **head, unsigned int l_number, FILE *file);
 void free_stack(stack_t *head);
 void m_pop(stack_t **head, unsigned int l_number);
 void m_swap(stack_t **head, unsigned int l_number);
 void m_add(stack_t **head, unsigned int l_number);
 void m_nop(stack_t **head, unsigned int l_number);
+void addnode(stack_t **head, int n);
+void addqueue(stack_t **head, int n);
+void f_queue(stack_t **head, unsigned int l_number);
+void f_stack(stack_t **head, unsigned int l_number);
 
 #endif

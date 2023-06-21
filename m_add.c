@@ -5,7 +5,7 @@
  * @l_number: line_number
  * Return: no return
 */
-void m_add(stack_t **head, unsigned int counter)
+void m_add(stack_t **head, unsigned int l_number)
 {
 	stack_t *h;
 	int len = 0, aux;
