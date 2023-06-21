@@ -1,24 +1,24 @@
 #include "monty.h"
-bus_t bus;
+global_var var_global;
 /**
-* main - is the main function of monty code interpreter
-* @argc: is the number of arguments
-* @argv: is the monty file location
-* Return: 0 on success
-*/
-int main(int argc, char *argv[])
+ * main - is th driver function for monty program
+ * @ac: is int num of arguments
+ * @av: is  the opcode file
+ * Return: 0
+ */
+int main(int ac, char **av)
 {
 	stack_t *stack;
 
 	stack = NULL;
-	if (argc != 2)
+	if (ac != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
-	read_file(argv[1], &stack);
-    
-	free_stack(stack);
+	read_file(av[1], &stack);
+
+	free_dlistint(stack);
 	return (0);
 }
